@@ -19,7 +19,7 @@ import AvatarHero5 from "../../../assets/svg/avatar-5.svg";
 
 const FooterForm = () => {
   return (
-    <Box>
+    <Box pt={5}>
       <Grid container spacing={8} justifyContent="center" alignItems="center">
         {/* LEFT */}
         <Grid size={{ xs: 12, md: 5 }} display="flex" justifyContent="center">
@@ -61,11 +61,11 @@ const FooterForm = () => {
                   color: "#A6A6A6",
                 }}
               >
-                Everything you need to accept to payment and grow your money of
+                Everything you need to accept to payment and grow<br/> your money of
                 manage anywhere on planet
               </Typography>
             </Box>
-            <Box>
+            <Box my={4}>
               <Image
                 src={MarkIconHero.src}
                 alt="Mark-Divider"
@@ -91,8 +91,8 @@ const FooterForm = () => {
                   color: "#A6A6A6",
                 }}
               >
-                I am very helped by this E-wallet application , my days are very
-                easy to use this application and its very helpful in my life ,
+                I am very helped by this E-wallet application , my <br/>days are very
+                easy to use this application and its very <br/>helpful in my life ,
                 even I can pay a short time 😍
               </Typography>
             </Box>
@@ -101,7 +101,7 @@ const FooterForm = () => {
                 display: "flex",
                 alignItems: "flex-start",
                 gap: 2,
-                my: 3,
+                my: 4,
               }}
             >
               <Typography
@@ -130,186 +130,132 @@ const FooterForm = () => {
         </Grid>
 
         {/* RIGHT */}
-        <Grid size={{ xs: 12, md: 7 }} display="flex" justifyContent="center">
-          <Box sx={{ width: "100%", maxWidth: "650px" }}>
+        <Grid size={{ xs: 12, md: 7 }} display="flex" justifyContent="right">
+          <Box
+            sx={{
+              width: "100%",
+              maxWidth: 712,
+
+            }}
+          >
             <Box
-              bgcolor={"#222938"}
-              border={"10px"}
-              borderRadius={"10px"}
-              p={4}
-              height={"588px"}
+              sx={{
+                bgcolor: "#222938",
+                borderRadius: "20px",
+                p: { xs: 3, md: 8 },
+                width: "100%",
+              }}
             >
+              {/* Header */}
               <Box
                 sx={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  justifyContent: "center",
                   textAlign: "center",
-                  width: "100%",
+                  mb: 3,
                 }}
               >
                 <Image
                   src={LoginIcon.src}
-                  alt="Mark Hero Benefit-Divider"
-                  priority
+                  alt="Get Started"
                   width={72}
-                  height={80}
+                  height={86}
+                  priority
                 />
 
                 <Typography
                   sx={{
                     fontFamily: "Inter",
                     fontWeight: 700,
-                    fontSize: { xs: "28px", sm: "40px", md: "30px" },
+                    fontSize: { xs: "26px", sm: "30px" },
                     color: "#fff",
                     mt: 1,
-                    lineHeight: { xs: "36px", md: "80px" },
                   }}
                 >
                   Get Started
                 </Typography>
               </Box>
+
+              {/* Form */}
               <Box
                 component="form"
                 sx={{
-                  width: "100%",
-                  maxWidth: 500,
-                  mx: "auto",
                   display: "flex",
                   flexDirection: "column",
-                  gap: { xs: 2, md: 1 },
+                  gap: 2,
+                  width: "100%",
                 }}
               >
                 {/* Email */}
                 <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontWeight: 500,
-                    fontSize: { xs: "13px", sm: "14px", md: "16px" },
-                    color: "#fff",
-                  }}
+                  sx={{ color: "#fff", fontSize: 14, fontWeight: 500 }}
                 >
                   Email
                 </Typography>
 
                 <TextField
                   fullWidth
-                  type="email"
                   label="Enter your email"
-                  variant="outlined"
                   size="small"
-                  slotProps={{
-                    input: {
-                      sx: { color: "#000" },
-                    },
-                  }}
                   sx={{
                     bgcolor: "#fff",
-                    height: "50px",
                     borderRadius: "10px",
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "10px",
-                      "& fieldset": {
-                        borderColor: "#222938",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "#fff",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "#fff",
-                      },
-                      height: "50px",
+                      height: 50,
                     },
                   }}
                 />
 
                 {/* Message */}
                 <Typography
-                  sx={{
-                    fontFamily: "Inter",
-                    fontWeight: 500,
-                    fontSize: { xs: "13px", sm: "14px", md: "16px" },
-                    color: "#A6A6A6",
-                    mt: { xs: 1, sm: 2 },
-                  }}
+                  sx={{ color: "#A6A6A6", fontSize: 14, fontWeight: 500 }}
                 >
                   Message
                 </Typography>
 
                 <TextField
                   fullWidth
-                  label="What are you saying?"
-                  variant="outlined"
                   multiline
                   rows={4}
-                  slotProps={{
-                    input: {
-                      sx: { color: "#000" },
-                    },
-                  }}
+                  label="What are you saying?"
                   sx={{
                     bgcolor: "#fff",
-                    height: "80px",
                     borderRadius: "10px",
                     "& .MuiOutlinedInput-root": {
                       borderRadius: "10px",
-                      "& fieldset": {
-                        borderColor: "#fff",
-                      },
-                      "&:hover fieldset": {
-                        borderColor: "#222938",
-                      },
-                      "&.Mui-focused fieldset": {
-                        borderColor: "#A6A6A6",
-                      },
-                      height: "80px",
                     },
                   }}
                 />
 
                 {/* Button */}
                 <Button
-                  fullWidth
                   sx={{
-                    mt: { xs: 2, sm: 3 },
-                    height: { xs: "48px", sm: "56px" },
-                    fontSize: { xs: "14px", sm: "16px" },
+                    mt: 2,
+                    height: 52,
                     fontWeight: 600,
                     color: "#fff",
-                    textTransform: "none",
                     bgcolor: "#54BD95",
                     borderRadius: "10px",
-                    "&:hover": {
-                      bgcolor: "#42a57c",
-                    },
+                    textTransform: "none",
+                    "&:hover": { bgcolor: "#42a57c" },
                   }}
                 >
                   Request Demo
                 </Button>
-                <Box
-                  sx={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "flex-end",
-                  }}
-                >
+
+                {/* Footer Text */}
+                <Box display="flex" justifyContent="flex-end">
                   <Typography
                     sx={{
-                      fontFamily: "Inter",
-                      fontWeight: 500,
-                      fontSize: { xs: "10px", sm: "12px", md: "14px" },
-                      lineHeight: "30px",
                       color: "#A6A6A6",
-                      textAlign: "right",
+                      fontSize: 13,
                     }}
                   >
-                    <Box
-                      component="span"
-                      sx={{ fontWeight: 400, fontSize: "12px" }}
-                    >
-                      or
-                    </Box>{" "}
+                    <Box component="span" sx={{ fontWeight: 400 }}>
+                      or{" "}
+                    </Box>
                     Start Free Trial
                   </Typography>
                 </Box>

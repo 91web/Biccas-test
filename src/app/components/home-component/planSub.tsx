@@ -3,6 +3,7 @@ import { Box, Typography, Grid, Button } from "@mui/material";
 import Image from "next/image";
 import MarkIcon from "../../../assets/svg/m-icon.svg";
 import MarkIconHero from "../../../assets/img/benefit-hero.png";
+import PlanBgColor from "../../../assets/svg/planbg.svg"
 
 const PlanSub = () => {
   return (
@@ -19,7 +20,7 @@ const PlanSub = () => {
           <Box
             sx={{
               width: "100%",
-              maxWidth: 375,
+              //  maxWidth: 475,
               textAlign: "center",
               p: { xs: 2, sm: 3 },
               bgcolor: "#fff",
@@ -34,7 +35,8 @@ const PlanSub = () => {
                 fontSize: { xs: "20px", sm: "25px", md: "30px" },
                 color: "#191A15",
                 lineHeight: { xs: "1.2", md: "1.1" },
-                mb: 1,
+                pt: 4,
+                pb: 1,
               }}
             >
               Free
@@ -86,7 +88,8 @@ const PlanSub = () => {
             </Box>
 
             <Box
-              my={3}
+              mt={2}
+              mb={1}
               p={2}
               sx={{ bgcolor: "#F9FAFB", width: "100%", borderRadius: "10px" }}
             >
@@ -103,7 +106,8 @@ const PlanSub = () => {
                     display: "flex",
                     alignItems: "flex-start",
                     gap: 2,
-                    mb: 2,
+                    p: 1.5,
+                    fontSize: "14px",
                   }}
                 >
                   <Image
@@ -131,7 +135,7 @@ const PlanSub = () => {
                   fontSize: "16px",
                   fontWeight: 600,
                   px: 3,
-                  width: { xs: "100%", sm: "85%" },
+                  width: { xs: "100%", md: "85%" },
                   height: "56px",
                   textTransform: "none",
                   bgcolor: "#FFFFFF",
@@ -158,11 +162,18 @@ const PlanSub = () => {
           <Box
             sx={{
               width: "100%",
-              maxWidth: 420,
+             // height: { xs: "765px", md: "730px" },
               textAlign: "center",
-              p: { xs: 2, md: 3 },
-              bgcolor: "#54BD95",
+              p: { xs: 2, md: 1.5 },
               borderRadius: "20px",
+
+              // ✅ Desktop only
+              backgroundImage:  `url(${PlanBgColor.src})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+
+              // ✅ Other screens background
+              bgcolor: "#6BC2A1",
             }}
           >
             {/* Heading */}
@@ -173,7 +184,8 @@ const PlanSub = () => {
                 fontSize: { xs: "20px", sm: "25px", md: "30px" },
                 color: "#fff",
                 lineHeight: { xs: "1.2", md: "1.1" },
-                mb: 1,
+                pt: 4,
+                pb: 1,
               }}
             >
               Pro
@@ -230,13 +242,13 @@ const PlanSub = () => {
                   color: "#ffff",
                   fontSize: "14px",
                   fontWeight: 500,
-                  px: 3,
-                  width: { xs: "50%", sm: "85%" },
+                  //px: 3,
+                  width: { xs: "50%", md: "42%" },
                   height: "40px",
                   textTransform: "none",
                   bgcolor: "#85DAB9",
                   border: "2px solid transparent",
-                  borderRadius: "20px",
+                  borderRadius: "10px",
                   "&:hover": { bgcolor: "#42a57c" },
                 }}
               >
@@ -267,7 +279,8 @@ const PlanSub = () => {
                     display: "flex",
                     alignItems: "flex-start",
                     gap: 2,
-                    mb: 2,
+                    p: 1.5,
+                    fontSize: "14px",
                   }}
                 >
                   <Image
@@ -322,7 +335,7 @@ const PlanSub = () => {
           <Box
             sx={{
               width: "100%",
-              maxWidth: 375,
+              // maxWidth: 375,
               textAlign: "center",
               p: { xs: 2, sm: 3 },
               bgcolor: "#fff",
@@ -337,7 +350,8 @@ const PlanSub = () => {
                 fontSize: { xs: "20px", sm: "25px", md: "30px" },
                 color: "#191A15",
                 lineHeight: { xs: "1.2", md: "1.1" },
-                mb: 1,
+                pt: 4,
+                pb: 1,
               }}
             >
               Business
@@ -389,8 +403,9 @@ const PlanSub = () => {
             </Box>
 
             <Box
-              my={3}
-              p={4}
+              mt={2}
+              mb={1}
+              p={2}
               sx={{
                 bgcolor: "#F9FAFB",
 
@@ -411,7 +426,7 @@ const PlanSub = () => {
                     display: "flex",
                     alignItems: "flex-start",
                     gap: 2,
-                    mb: 2,
+                    p: 1.5,
                   }}
                 >
                   <Image

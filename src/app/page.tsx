@@ -112,7 +112,7 @@ export default function Home() {
             "linear-gradient(40deg, transparent 0%, rgba(255,214,214,0.22) 3%, #FFFFFF 65%)",
         }}
       >
-        <Container maxWidth="xl" sx={{ py: 10 }}>
+        <Container maxWidth="xl" sx={{ pt: 10 ,pb:3}}>
           <FeatureSection />
         </Container>
       </Box>

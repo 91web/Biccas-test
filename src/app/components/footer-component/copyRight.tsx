@@ -6,10 +6,10 @@ import { Typography } from "@mui/material";
 
 export const CopyRight = () => {
   return (
-    <Box py={5}>
+    <Box pt={5} pb={3}>
       <Grid container spacing={2} justifyContent="center">
         {/* Feature 1 */}
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ xs: 12, md: 6 }} order={{ xs: 2, md: 1 }}>
           <Box>
             <Typography
               sx={{
@@ -25,7 +25,7 @@ export const CopyRight = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
+        <Grid size={{ xs: 12, md: 6 }} order={{ xs: 1, md: 2 }}>
           {/* ===== Terms & Privacy ===== */}
           <Box
             display="flex"

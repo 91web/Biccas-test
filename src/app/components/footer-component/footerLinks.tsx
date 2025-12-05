@@ -1,17 +1,15 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import LogoB from "../../../assets/svg/logo.svg";
-
 import Image from "next/image";
-import { Grid } from "@mui/material";
 import Link from "next/link";
 import { SubFormSection } from "./subForm";
 import { CopyRight } from "./copyRight";
 
 const linkStyle = {
-  fontSize: "18px",
+  fontSize: "16px",
   fontWeight: 500,
   color: "#A6A6A6",
-  my:"5px",
+  my: "5px",
   textDecoration: "none",
   "&:hover": {
     color: "#fff",
@@ -31,15 +29,21 @@ export const footerLinkStyle = {
 
 export const FooterLinks = () => {
   return (
-    <Box py={15}>
-      <Grid container spacing={4} justifyContent="center" alignItems="center">
-        <Grid size={{ xs: 12, md: 5 }}>
+    <Box pt={15}>
+      <Grid
+        container
+        spacing={4}
+        justifyContent="center"
+        alignItems="flex-start"
+      >
+        {/* Left Section */}
+        <Grid size={{ xs: 12, md: 7 }}>
           <Box
-           mb={10}
+            mb={10}
             display="flex"
             flexDirection="column"
-            alignItems="left" // Center horizontally
-            textAlign="left" // Center text
+            alignItems="flex-start"
+            textAlign="left"
           >
             <Image src={LogoB.src} alt="Logo Footer" width={160} height={30} />
             <Typography
@@ -49,118 +53,101 @@ export const FooterLinks = () => {
                 fontSize: { xs: "14px", sm: "16px", md: "18px" },
                 lineHeight: "30px",
                 color: "#A6A6A6",
-                textAlign: "left",
                 my: 3,
               }}
             >
-              Get started noew try our product
+              Get started now, try our product
             </Typography>
             <SubFormSection />
           </Box>
         </Grid>
-        <Grid size={{ xs: 12, md: 7 }}>
+
+        {/* Right Section */}
+        <Grid size={{ xs: 12, md: 5 }}>
           <Grid
             container
             spacing={2}
-            justifyContent="center"
+            justifyContent="flex-start"
             alignItems="flex-start"
-            sx={{ color: "#fff" }}
           >
-            {/* ===== Support ===== */}
-            <Grid size={{ xs: 12, md: 3 }}>
+            {/* Support */}
+            <Grid size={{ xs: 12, md: 4 }}>
               <Box display="flex" flexDirection="column" gap={1}>
                 <Typography
                   sx={{
-                    fontFamily: "inter",
+                    fontFamily: "Inter",
                     fontSize: "18px",
                     fontWeight: 500,
+                    color: "#fff",
                   }}
                 >
                   Support
                 </Typography>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Help centre</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Account information</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>About</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Contact us</Box>
-                </Link>
+                {[
+                  "Help centre",
+                  "Account information",
+                  "About",
+                  "Contact us",
+                ].map((text, i) => (
+                  <Link key={i} href="#" style={{ textDecoration: "none" }}>
+                    <Box sx={linkStyle}>{text}</Box>
+                  </Link>
+                ))}
               </Box>
             </Grid>
 
-            {/* ===== Help & Solutions ===== */}
-            <Grid size={{ xs: 12, md: 3 }}>
+            {/* Help & Solutions */}
+            <Grid size={{ xs: 12, md: 4 }}>
               <Box display="flex" flexDirection="column" gap={1}>
                 <Typography
                   sx={{
-                    fontFamily: "inter",
+                    fontFamily: "Inter",
                     fontSize: "18px",
                     fontWeight: 500,
+                    color: "#fff",
                   }}
                 >
                   Help & Solutions
                 </Typography>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Talk to support</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Support docs</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>System status</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Covid response</Box>
-                </Link>
+                {[
+                  "Talk to support",
+                  "Support docs",
+                  "System status",
+                  "Covid response",
+                ].map((text, i) => (
+                  <Link key={i} href="#" style={{ textDecoration: "none" }}>
+                    <Box sx={linkStyle}>{text}</Box>
+                  </Link>
+                ))}
               </Box>
             </Grid>
 
-            {/* ===== Product ===== */}
-            <Grid size={{ xs: 12, md: 3 }}>
+            {/* Product */}
+            <Grid size={{ xs: 12, md: 4 }}>
               <Box display="flex" flexDirection="column" gap={1}>
                 <Typography
                   sx={{
-                    fontFamily: "inter",
+                    fontFamily: "Inter",
                     fontSize: "18px",
                     fontWeight: 500,
+                    color: "#fff",
                   }}
                 >
                   Product
                 </Typography>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Update</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Security</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Beta test</Box>
-                </Link>
-
-                <Link href="#" style={{ textDecoration: "none" }}>
-                  <Box sx={linkStyle}>Pricing Product</Box>
-                </Link>
+                {["Update", "Security", "Beta test", "Pricing Product"].map(
+                  (text, i) => (
+                    <Link key={i} href="#" style={{ textDecoration: "none" }}>
+                      <Box sx={linkStyle}>{text}</Box>
+                    </Link>
+                  )
+                )}
               </Box>
             </Grid>
           </Grid>
         </Grid>
       </Grid>
+
       <CopyRight />
     </Box>
   );
