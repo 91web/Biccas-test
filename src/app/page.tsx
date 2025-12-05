@@ -20,7 +20,7 @@ export default function Home() {
         backgroundSize: "cover", // Ensure the image covers the entire section
         backgroundPosition: "center", // Center the background image
         backgroundRepeat: "no-repeat", // Prevent the image from repeating
-        height: "120vh", // Set height to 100vh
+       // height: "120vh", // Set height to 100vh
         width: "100%", // Set width to 100%
         // display: "flex",
         alignItems: "center", // Center content vertically

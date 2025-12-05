@@ -2,22 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import {
-  Container,
-  Typography,
-  Avatar,
-  Box,
-  Button,
-  Menu,
-  MenuItem,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Divider,
-  Paper,
-  Grid,
-} from "@mui/material";
+import { Container, Typography, Avatar, Box, Paper } from "@mui/material";
 import axios from "@/lib/axiosInstance";
 import BenefitSection from "../components/home-component/benefitSection";
 import { CopyRight } from "../components/footer-component/copyRight";
@@ -29,9 +14,9 @@ export default function ProfilePage() {
 
   // Dropdown state
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const [openDialog, setOpenDialog] = useState(false);
+  //const [openDialog, setOpenDialog] = useState(false);
 
-  const openMenu = Boolean(anchorEl);
+ // const openMenu = Boolean(anchorEl);
 
   // Fetch profile
   useEffect(() => {
@@ -65,9 +50,6 @@ export default function ProfilePage() {
     fetchProfile();
   }, [router]);
 
- 
-
-
   if (loading) return <Typography>Loading...</Typography>;
 
   if (!profile) return <Typography>No profile found</Typography>;
@@ -94,12 +76,8 @@ export default function ProfilePage() {
               sx={{
                 width: { xs: 120, md: 150 },
                 height: { xs: 120, md: 150 },
-              
               }}
-             
             />
-
-          
           </Box>
 
           {/* Right: User Details */}
