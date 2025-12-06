@@ -161,6 +161,7 @@ export default function ResponsiveAppBar() {
               display: { xs: "flex", md: "none" },
               justifyContent: "flex-end",
               flexGrow: 1,
+            
             }}
           >
             <IconButton
@@ -194,6 +195,11 @@ export default function ResponsiveAppBar() {
                   md: "none",
                 },
                 mt: 2, // Add top margin to the dropdown menu
+                '& .MuiPaper-root': {
+                  height: "100vh",
+                  width: "20%",
+                
+                }
               }}
             >
               {navItem.map((item) => (
@@ -204,6 +210,7 @@ export default function ResponsiveAppBar() {
                       color: item.active ? "#000" : "#A6A6A6",
                       width: "100%",
                       fontSize: item.active ? "18px" : "16px",
+                      my :2,
                     }}
                   >
                     {item.name}
@@ -212,7 +219,7 @@ export default function ResponsiveAppBar() {
               ))}
               {/* Auth Buttons */}
               {profile ? (
-                <Box mx={"auto"}>
+                <Box mx={"auto"} mt={45} px={"40px"}>
                   <UserProfile />
                 </Box>
               ) : (
